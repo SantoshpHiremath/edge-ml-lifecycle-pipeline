@@ -1,0 +1,49 @@
+{
+  "modelVersions": [
+    {
+      "version": 1,
+      "stage": "archived",
+      "accuracy": 1.0,
+      "epochs": 15
+    },
+    {
+      "version": 2,
+      "stage": "production",
+      "accuracy": 1.0,
+      "epochs": 15
+    }
+  ],
+  "driftChecks": [
+    {
+      "scenario": "normal_traffic",
+      "nSamples": 30,
+      "ksStatistic": 0.16979166666666667,
+      "pValue": 0.3969297841862097,
+      "inputDriftDetected": false,
+      "meanConfidence": 0.9962636510531108,
+      "baselineConfidence": 0.9951321333646774,
+      "confidenceDriftDetected": false,
+      "retrainDecision": {
+        "trigger_retrain": false,
+        "reasons": []
+      }
+    },
+    {
+      "scenario": "shifted_traffic",
+      "nSamples": 30,
+      "ksStatistic": 1.0,
+      "pValue": 1.6807368042018469e-37,
+      "inputDriftDetected": true,
+      "meanConfidence": 0.9999028066794078,
+      "baselineConfidence": 0.9951321333646774,
+      "confidenceDriftDetected": false,
+      "retrainDecision": {
+        "trigger_retrain": true,
+        "reasons": [
+          "input distribution drift detected (KS p-value=1.681e-37 < alpha)",
+          "recent labeled-sample accuracy 55.00% below minimum 75.00%"
+        ]
+      }
+    }
+  ]
+}
