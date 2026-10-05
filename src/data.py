@@ -3,7 +3,7 @@
 Four classes drawn on a 16x16 grayscale canvas: circle, square, triangle,
 blank. Deliberately tiny (fast to train in seconds, small enough to be a
 realistic edge-inference target) rather than a copy of the larger
-steel-defect-cv-classifier project elsewhere in this portfolio -- this
+steel-defect-cv-classifier project -- this
 project is about the lifecycle around a model, not about the model's
 own domain accuracy.
 """

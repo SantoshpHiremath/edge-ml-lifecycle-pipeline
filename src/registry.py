@@ -1,7 +1,6 @@
-"""A real, tested, file-backed model registry.
+"""A tested, file-backed model registry.
 
-Not a mock of MLflow/SageMaker Model Registry/etc. -- a small, honest
-implementation of the same core idea: every trained model gets a
+A small implementation of the core idea behind MLflow/SageMaker Model Registry/etc.: every trained model gets a
 version, versions carry metrics and a lifecycle stage
 (staging/production/archived), and promoting a new version to
 production automatically archives whichever version held it before,
